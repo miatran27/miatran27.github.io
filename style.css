@@ -49,20 +49,11 @@ body {
   --c5: #f7f5ff;
 }
   
-  /* --_g: radial-gradient(#0000 70%,var(--c1) 71%);
-  background:
-    var(--_g),var(--_g) calc(var(--s)/2) calc(var(--s)/2),
-    conic-gradient(var(--c2) 25%,var(--c3) 0 50%,var(--c4) 0 75%,var(--c5) 0);
-  background-size: var(--s) var(--s);
-} */
+
 
 main {
-    /* padding-inline: var(--gutter);
-    padding-block: var(--vertical); */
     font-size: var(--body-copy);
     color: black;
-    /* margin-inline: auto;
-    text-align: center; */
 }
 
 main.projects ul {
@@ -79,15 +70,27 @@ main.projects ul {
     inline-size: 100%;
     block-size: 100%;
     height: 30vh;
+    display: grid;
+    place-items: center;
   }
   
 
 
-  main.projects li:nth-child(1) { background-color: lightgray; }
-  main.projects li:nth-child(2) { background-color: firebrick; }
-  main.projects li:nth-child(3) { background-color: yellowgreen; }
-  main.projects li:nth-child(4) { background-color: darkolivegreen; }
-  main.projects li:nth-child(5) { background-color: white; }
+  main.projects li:nth-child(1) { 
+    background-color: lightgray;
+}
+  main.projects li:nth-child(2) { 
+    background-color: firebrick; 
+}
+  main.projects li:nth-child(3) { 
+    background-color: yellowgreen; 
+}
+  main.projects li:nth-child(4) { 
+    background-color: darkolivegreen; 
+}
+  main.projects li:nth-child(5) { 
+    background-color: white; 
+}
 
 
 main p{
@@ -100,17 +103,10 @@ h1 {
 }
 
 
-ul {
-    /* padding-inline: var(--gutter); */
-    display: grid;
-    /* gap: var(--gutter) */
-}
 
 .footer {
-    /* padding-block: var(--vertical); */
     color: var(--background);
     background-color: var(--color);
-    /* padding-inline: var(--gutter); */
 }
 
 footer, hgroup p {
