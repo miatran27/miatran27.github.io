@@ -28,9 +28,13 @@ body {
     align-items: center;
 }
 
-main p {
-padding-block-end: 2rem;
+.hero {
+    height: 30vh;
 }
+
+/* main p {
+padding-block-end: 2rem;
+} */
 
 /* Wanted a cool pattern behind my work */
 /* Found this pattern collection: https://css-pattern.com/ */
@@ -53,13 +57,38 @@ body {
 } */
 
 main {
-    padding-inline: var(--gutter);
-    padding-block: var(--vertical);
+    /* padding-inline: var(--gutter);
+    padding-block: var(--vertical); */
     font-size: var(--body-copy);
     color: black;
     /* margin-inline: auto;
     text-align: center; */
 }
+
+main.projects ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, var(--row-height));
+    gap: 0;                  
+    padding: 0;              
+    list-style: none;
+  }
+
+
+  main.projects li {
+    inline-size: 100%;
+    block-size: 100%;
+    height: 30vh;
+  }
+  
+
+
+  main.projects li:nth-child(1) { background-color: lightgray; }
+  main.projects li:nth-child(2) { background-color: firebrick; }
+  main.projects li:nth-child(3) { background-color: yellowgreen; }
+  main.projects li:nth-child(4) { background-color: darkolivegreen; }
+  main.projects li:nth-child(5) { background-color: white; }
+
 
 main p{
     font-size: var(--body-copy);
@@ -72,16 +101,16 @@ h1 {
 
 
 ul {
-    padding-inline: var(--gutter);
+    /* padding-inline: var(--gutter); */
     display: grid;
-    gap: var(--gutter)
+    /* gap: var(--gutter) */
 }
 
 .footer {
     /* padding-block: var(--vertical); */
     color: var(--background);
     background-color: var(--color);
-    padding-inline: var(--gutter);
+    /* padding-inline: var(--gutter); */
 }
 
 footer, hgroup p {
