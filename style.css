@@ -8,17 +8,16 @@
 }
 
 :root {
+    font-size: 100%;
     --color: tomato;
     --background:#ffffff;
-
     --body-copy: 1rem;
     --heading-copy: calc(var(--body-copy) * 2);
-
     --gutter: 2rem;
     --vertical: 2.5rem;
 }
 
-body {
+/* body {
     font-family:'Graph FF Condensed';
     color: var(--color);
     background-color: var(--background);
@@ -27,7 +26,7 @@ body {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-items: center;
-}
+} */
 
 main p {
 padding-block-end: 2rem;
@@ -55,10 +54,14 @@ body {
 main {
     padding-inline: var(--gutter);
     padding-block: var(--vertical);
-    font-size: calc(var(--heading-copy) * 2);
+    font-size: var(--body-copy);
     color: black;
     /* margin-inline: auto;
     text-align: center; */
+}
+
+main p{
+    font-size: var(--body-copy);
 }
 
 h1 {
@@ -73,7 +76,7 @@ ul {
     gap: var(--gutter)
 }
 
-.reverse {
+.footer {
     padding-block: var(--vertical);
     color: var(--background);
     background-color: var(--color);
