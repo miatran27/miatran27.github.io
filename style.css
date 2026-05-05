@@ -17,16 +17,16 @@
     --vertical: 2.5rem;
 }
 
-/* body {
+body {
     font-family:'Graph FF Condensed';
     color: var(--color);
     background-color: var(--background);
     font-size: var(--body-copy);
-    block-size: 100vh;
-    display: grid;
-    grid-template-rows: min-content 1fr min-content;
+    /* block-size: 100vh; */
+    /* display: grid; */
+    /* grid-template-rows: min-content 1fr min-content; */
     align-items: center;
-} */
+}
 
 main p {
 padding-block-end: 2rem;
@@ -43,13 +43,14 @@ body {
   --c3: #f5f5f5;
   --c4: #fff1f0;
   --c5: #f7f5ff;
+}
   
-  --_g: radial-gradient(#0000 70%,var(--c1) 71%);
+  /* --_g: radial-gradient(#0000 70%,var(--c1) 71%);
   background:
     var(--_g),var(--_g) calc(var(--s)/2) calc(var(--s)/2),
     conic-gradient(var(--c2) 25%,var(--c3) 0 50%,var(--c4) 0 75%,var(--c5) 0);
   background-size: var(--s) var(--s);
-}
+} */
 
 main {
     padding-inline: var(--gutter);
@@ -77,7 +78,7 @@ ul {
 }
 
 .footer {
-    padding-block: var(--vertical);
+    /* padding-block: var(--vertical); */
     color: var(--background);
     background-color: var(--color);
     padding-inline: var(--gutter);
