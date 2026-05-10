@@ -98,6 +98,12 @@ main p{
 } */
 
 
+h1 {
+    font-size: calc(var(--heading-copy) * 2);
+    padding-block-end: 1rem;
+}
+
+
 
 
 main.projects {
@@ -134,16 +140,6 @@ main.projects {
   }
 
 
-
-
-
-h1 {
-    font-size: calc(var(--heading-copy) * 2);
-    padding-block-end: 1rem;
-}
-
-
-
 .footer {
     color: var(--background);
     background-color: var(--color);
@@ -155,4 +151,30 @@ footer, hgroup p {
 
 a {
     text-decoration-line: underline;
+}
+
+
+
+
+
+@media (min-width: 1024px) {
+
+    main.projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* main.projects {
+    grid-template-columns: repeat(6, 1fr);
+    }
+
+    .project:nth-child(1), .project:nth-child(2) {
+        grid-column: span 3;
+    }
+    .project:nth-child(3), .project:nth-child(4), .project:nth-child(5) {
+        grid-column: span 2;
+    } */
+
+
+
+
 }
