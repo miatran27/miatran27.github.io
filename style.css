@@ -15,6 +15,9 @@
     --heading-copy: calc(var(--body-copy) * 2);
     --gutter: 2rem;
     --vertical: 2.5rem;
+    --padding: 1rem;
+    --gap: var(--padding);
+    --border-radius: 0.5rem;
 }
 
 body {
@@ -110,12 +113,14 @@ main.projects {
     display: grid;
     grid-template-columns: 1fr;
     /* grid-template-rows: repeat(5, 30vh); */
-    gap: 0;
-    padding: 0;
+    gap: var(--gap);
+    padding: var(--padding);
   }
   .project {
     overflow: hidden;
+    border-radius: var(--border-radius);
   }
+
   .project a {
     display: grid;
     place-items: center;
@@ -143,6 +148,7 @@ main.projects {
 .footer {
     color: var(--background);
     background-color: var(--color);
+    padding: var(--padding);
 }
 
 footer, hgroup p {
