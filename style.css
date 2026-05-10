@@ -51,7 +51,7 @@ body {
   
 
 
-main {
+/* main {
     font-size: var(--body-copy);
     color: black;
 }
@@ -95,7 +95,47 @@ main.projects ul {
 
 main p{
     font-size: var(--body-copy);
-}
+} */
+
+
+
+
+main.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* grid-template-rows: repeat(5, 30vh); */
+    gap: 0;
+    padding: 0;
+  }
+  .project {
+    overflow: hidden;
+  }
+  .project a {
+    display: grid;
+    place-items: center;
+    block-size: 100%;
+    inline-size: 100%;
+    color: white;
+    text-decoration: none;
+  }
+  .project img, .project video,.project h2 {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .project img, .project video {
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+  }
+  .project h2 {
+    z-index: 1;
+    padding: 0.5rem 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+
+
+
 
 h1 {
     font-size: calc(var(--heading-copy) * 2);
