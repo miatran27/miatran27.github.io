@@ -8,6 +8,8 @@
 }
 
 :root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --h1: 2rem;
     font-size: 100%;
     --color: tomato;
     --background:#ffffff;
@@ -21,7 +23,7 @@
 }
 
 body {
-    font-family:'Graph FF Condensed';
+    font-family: var(--font-heading);
     color: var(--color);
     background-color: var(--background);
     font-size: var(--body-copy);
@@ -33,6 +35,11 @@ body {
 
 .hero {
     height: 30vh;
+}
+
+.hero h1 {
+    font-size: var(--h1);
+    font-weight: 600;
 }
 
 /* main p {
@@ -100,6 +107,9 @@ main p{
     font-size: var(--body-copy);
 } */
 
+.hero {
+    padding: var(--padding);
+}
 
 h1 {
     font-size: calc(var(--heading-copy) * 2);
