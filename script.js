@@ -7,3 +7,4 @@ window.addEventListener('scroll', () => {
       backToTop.classList.remove('visible')
   }
 })
+
