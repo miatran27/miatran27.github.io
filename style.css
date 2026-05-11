@@ -116,33 +116,28 @@ main.projects {
     gap: var(--gap);
     padding: var(--padding);
   }
-  .project {
-    overflow: hidden;
-    border-radius: var(--border-radius);
+  .project header {
+    padding-block-end: var(--gap);
+  }
+
+  .project h2 {
+    padding-block-end: calc(var(--gap) / 3);
   }
 
   .project a {
-    display: grid;
-    place-items: center;
-    block-size: 100%;
-    inline-size: 100%;
-    color: white;
-    text-decoration: none;
+    display: block;
+    border-radius: var(--border-radius);
+    overflow: hidden;
   }
-  .project img, .project video,.project h2 {
-    grid-column: 1;
-    grid-row: 1;
-  }
-  .project img, .project video {
+
+  .project img,
+  .project video {
     inline-size: 100%;
-    block-size: 100%;
+    block-size: auto;
+    display: block;
     object-fit: cover;
   }
-  .project h2 {
-    z-index: 1;
-    padding: 0.5rem 1rem;
-    background-color: rgba(0, 0, 0, 0.4);
-  }
+
 
 
 .footer {
