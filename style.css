@@ -9,12 +9,12 @@
 
 :root {
     --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Open Sans', sans-serif;
     --h1: 2rem;
     font-size: 100%;
-    --color: tomato;
+    --color: black;
     --background:#ffffff;
     --body-copy: 1rem;
-    --heading-copy: calc(var(--body-copy) * 2);
     --gutter: 2rem;
     --vertical: 2.5rem;
     --padding: 1rem;
@@ -23,7 +23,7 @@
 }
 
 body {
-    font-family: var(--font-heading);
+    font-family: var(--font-body);
     color: var(--color);
     background-color: var(--background);
     font-size: var(--body-copy);
@@ -108,12 +108,17 @@ main p{
 } */
 
 .hero {
-    padding: var(--padding);
+    padding: calc(3 * var(--padding));
+    height: 70vh;
+    /* margin-block-end: 7rem; */
 }
 
-h1 {
-    font-size: calc(var(--heading-copy) * 2);
-    padding-block-end: 1rem;
+
+
+.hero h1 {
+    font-size: var(--h1);
+    font-weight: 600;
+    padding-block-end: 2rem;
 }
 
 
@@ -126,24 +131,28 @@ main.projects {
     gap: var(--gap);
     padding: var(--padding);
   }
+  
   .project header {
-    padding-block-end: var(--gap);
+    padding-block-end:calc(var(--gap) / 4);
+    font-size: var(--h1);
   }
 
   .project h2 {
-    padding-block-end: calc(var(--gap) / 3);
+    padding-block-end: calc(var(--gap) / 4);
+    font-weight: 600;
   }
 
   .project a {
     display: block;
     border-radius: var(--border-radius);
     overflow: hidden;
+    aspect-ratio: 16 / 9;
   }
 
   .project img,
   .project video {
     inline-size: 100%;
-    block-size: auto;
+    block-size: 100%;
     display: block;
     object-fit: cover;
   }
@@ -154,6 +163,15 @@ main.projects {
     color: var(--background);
     background-color: var(--color);
     padding: var(--padding);
+}
+
+.footer-links {
+    display: flex;
+    gap: var(--gap);
+}
+
+.footer p {
+    padding-block-start: var(--padding);
 }
 
 footer, hgroup p {
@@ -174,18 +192,17 @@ a {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* main.projects {
-    grid-template-columns: repeat(6, 1fr);
+    .hero h1 {
+        font-size: calc(2 * var(--h1));
+        text-wrap: balance;
     }
 
-    .project:nth-child(1), .project:nth-child(2) {
-        grid-column: span 3;
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
-    .project:nth-child(3), .project:nth-child(4), .project:nth-child(5) {
-        grid-column: span 2;
-    } */
-
-
-
 
 }
