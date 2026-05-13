@@ -29,54 +29,67 @@ body {
     color: var(--color);
     background-color: var(--background);
     font-size: var(--body-copy);
-    /* block-size: 100vh; */
-    /* display: grid; */
-    /* grid-template-rows: min-content 1fr min-content; */
     align-items: center;
 }
 
-.hero {
-    height: 30vh;
-}
-
-.hero h1 {
-    font-size: var(--h1);
-    font-weight: 600;
-    font-family: var(--font-heading);
-}
-
-/* main p {
-padding-block-end: 2rem;
-} */
-
-/* Wanted a cool pattern behind my work */
-/* Found this pattern collection: https://css-pattern.com/ */
-/* I learned that i can change the CSS styles of the background in the code template */
-
-body {
-  --s: 80px; /* control the size*/
-  --c1: #ffffff;
-  --c2: #dbfff8;
-  --c3: #f5f5f5;
-  --c4: #fff1f0;
-  --c5: #f7f5ff;
-}
-  
 
 .hero {
     padding: calc(3 * var(--padding));
     height: 70vh;
+    display: flex;
+    flex-direction: column;
     /* margin-block-end: 7rem; */
 }
-
 
 
 .hero h1 {
     font-size: var(--h1);
     font-weight: 600;
     padding-block-end: 2rem;
+    font-family: var(--font-heading);
     line-height: var(--line-height);
 }
+
+
+.hero h1 em {
+    font-style: italic;
+}
+
+.hero p:nth-child(2) {
+    /* font-size: calc(var(--body-copy) * 2); */
+    font-size: 1rem;
+    text-wrap: pretty;
+}
+
+
+.hero p:nth-child(3) {
+    margin-block-start: auto; 
+}
+
+  .arrow {
+    display: inline-block;
+    animation: bounce 1.5s ease-in-out infinite;
+    font-size: calc(var(--body-copy) * 2);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(0.3rem); }
+  }
+
+
+
+/* body {
+  --s: 80px;
+  --c1: #ffffff;
+  --c2: #dbfff8;
+  --c3: #f5f5f5;
+  --c4: #fff1f0;
+  --c5: #f7f5ff;
+} */
+  
+
 
 
 
@@ -141,6 +154,12 @@ a {
 }
 
 
+.project {
+    border-block-start: 1px solid var(--color);
+    padding-block-start: var(--gap);
+  }
+
+
 
 html {
     scroll-behavior: smooth;
@@ -171,10 +190,21 @@ html {
 
 
 
-  .project {
-    border-block-start: 1px solid var(--color);
-    padding-block-start: var(--gap);
-  }
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: calc(1.5 * var(--h1));
+    }
+
+     .hero p:nth-child(2) {
+        font-size: calc(var(--body-copy) * 1.5);
+        text-wrap: balance;
+     }
+
+     .hero p:nth-child(3) {
+        font-size: calc(var(--body-copy) * 1.5);
+    }
+}
+
 
 
 
@@ -185,7 +215,7 @@ html {
     }
 
     .hero h1 {
-        font-size: calc(2 * var(--h1));
+        font-size: calc(1.8 * var(--h1));
         text-wrap: balance;
     }
 
@@ -205,4 +235,12 @@ html {
       }
 
 
+      .hero p:nth-child(2) {
+        font-size: calc(var(--body-copy) * 2);
+        max-width: 60ch;
+    }
+
+    .hero p:nth-child(3) {
+    font-size: calc(var(--body-copy) * 2);
+}
 }
