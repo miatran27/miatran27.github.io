@@ -13,6 +13,7 @@
     --row-gap: 2rem;
     --border-radius: 0.5rem;
     --line-height: 1.1;
+    --line-weight: calc(var(--base) / 16);
 }
 
 body {
@@ -128,7 +129,7 @@ a {
 
 
 .project {
-    border-block-start: 1px solid var(--color);
+    border-block-start: var(--line-weight) solid var(--color);
     padding-block-start: var(--gap);
   }
 
@@ -176,11 +177,27 @@ html {
      .hero p:nth-child(3) {
         font-size: calc(var(--body-copy) * 1.5);
     }
+
+    .project h2 {
+        font-size: calc(var(--body-copy) * 1.5);
+    }
+
+    main.projects {
+        row-gap: var(--row-gap);
+    }
 }
 
 
 
 @media (min-width: 1024px) {
+
+    .hero {
+        padding: calc(3 * var(--padding));
+    }
+
+    .project h2 {
+        font-size: calc(var(--body-copy) * 2);
+    }
 
     main.projects {
         grid-template-columns: repeat(2, 1fr);
@@ -192,7 +209,6 @@ html {
     .hero h1 {
         font-size: calc(1.8 * var(--h1));
         text-wrap: balance;
-        /* max-width: 50ch; */
     }
 
     .footer {
