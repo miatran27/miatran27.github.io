@@ -203,6 +203,10 @@ html {
      .hero p:nth-child(3) {
         font-size: calc(var(--body-copy) * 1.5);
     }
+
+    main.projects {
+        row-gap: calc(var(--gap) * 2);
+    }
 }
 
 
@@ -210,8 +214,15 @@ html {
 
 @media (min-width: 1024px) {
 
+    /* .hero {
+        padding: 4rem;
+    } */
+
     main.projects {
         grid-template-columns: repeat(2, 1fr);
+        padding: calc(3 * var(--padding));
+        row-gap: calc(var(--gap) * 4);
+        column-gap: calc(var(--gap) * 2);
     }
 
     .hero h1 {
@@ -227,15 +238,7 @@ html {
         padding-inline: 3rem;
     }
 
-
-    main.projects {
-        padding: calc(3 * var(--padding));
-        row-gap: calc(var(--gap) * 4);
-        column-gap: calc(var(--gap) * 2);
-      }
-
-
-      .hero p:nth-child(2) {
+    .hero p:nth-child(2) {
         font-size: calc(var(--body-copy) * 2);
         max-width: 60ch;
     }
