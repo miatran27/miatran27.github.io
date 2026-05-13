@@ -228,7 +228,7 @@ html {
     .hero h1 {
         font-size: calc(1.8 * var(--h1));
         text-wrap: balance;
-        max-width: 50ch;
+        /* max-width: 50ch; */
     }
 
     .footer {
