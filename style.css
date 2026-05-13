@@ -7,7 +7,6 @@
     --color: black;
     --background:#ffffff;
     --body-copy: 1rem;
-    --vertical: 2.5rem;
     --padding: 1rem;
     --gap: var(--padding);
     --row-gap: 2rem;
@@ -22,6 +21,7 @@ body {
     background-color: var(--background);
     font-size: var(--body-copy);
     align-items: center;
+    caret-color: transparent;
 }
 
 
@@ -105,9 +105,7 @@ main.projects {
 
 .footer {
     color: var(--colro);
-    /* background-color: var(--color); */
     padding: var(--padding);
-    /* padding-block-start: 3rem; */
 }
 
 .footer-links {
