@@ -30,7 +30,6 @@ body {
     height: 70vh;
     display: flex;
     flex-direction: column;
-    /* margin-block-end: 7rem; */
 }
 
 
@@ -81,7 +80,6 @@ main.projects {
   
   .project h2 {
     padding-block-end: calc(var(--gap) / 4);
-    /* font-size: calc(var(--h1) / 2); */
     font-size: calc(var(--body-copy)*1.5);
     font-weight: 600;
   }
